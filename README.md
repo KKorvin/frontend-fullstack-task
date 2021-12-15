@@ -27,34 +27,3 @@ Use Docker Compose for defining containers for your application. It should be po
 ## Technology stack
 
 Feel free to use your favorite technology stack.
-
------
-
-## Application details
-
-### Stack
-
-* Mongo DB 
-* React.js
-* Node.js (Express)
-* Docker
-
-### HOW TO USE THE APP
-
-Start: `docker compose up`
-
-UI app is served on `http://localhost:8080`
-API is served on `http://localhost:5000/api`
-
-Testing UI: `docker build -t node-docker --target test ./backend` 
-Testing API: `docker build -t node-docker --target test ./frontend`
-
-OR: `yarn run test` in the corresponding directories
-
-#### API keys:
-The system stores hashed versions of API keys, not the keys itself.
-Two initial test hashes are injected via `docker-compose`.
-
-Valid keys to check:
-`http://localhost:5000/api/names?apiKey=ee8f9fb4f5c35c3aec95107a05bebc82`
-`http://localhost:5000/api/names?apiKey=b0dc2725d3b61ead193753b5f07c687c`
